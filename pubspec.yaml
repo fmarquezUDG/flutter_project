@@ -9,12 +9,35 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  http: ^1.1.0
+  shared_preferences: ^2.2.2
+  audioplayers: ^5.2.1
+
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: ^0.13.1
 
 flutter:
   uses-material-design: true
   assets:
     - assets/images/udg.png
+    - assets/images/medalla1.png
+    - assets/images/medalla2.png
+    - assets/images/medalla3.png
+    - assets/images/medalla4.png
+    - assets/images/medalla5.png
+    - assets/images/medalla6.png
+    - assets/images/medalla7.png
+    - assets/images/medalla8.png
+    - assets/images/pokemon.png
+    - assets/images/pokemon_logo.png
+    - assets/images/pokebola.png
+    - assets/audio/quienpokemon.mp3
+    - assets/audio/pokemon-intro.mp3
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/pokemon_logo.png"

@@ -7,6 +7,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'dart:convert';
 import 'dart:math';
+import 'package:firebase_core/firebase_core.dart';
 
 const Map<int, List<int>> generationRanges = {
   1: [1, 151],      // Kanto
@@ -38,8 +39,10 @@ String getGenerationLabel(int gen) {
 // ----------- APP INITIALIZATION -----------
 // Inicializa la aplicación Flutter con el tema principal y la pantalla de inicio
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
